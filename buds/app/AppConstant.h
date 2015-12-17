@@ -16,7 +16,7 @@
 #define		NSERROR(text, number)				[NSError errorWithDomain:text code:number userInfo:nil]
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-#define		FIREBASE							@"https://realtime70.firebaseio.com"
+#define		FIREBASE							@"https://crackling-heat-1760.firebaseio.com/"
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 #define		DEFAULT_TAB							0

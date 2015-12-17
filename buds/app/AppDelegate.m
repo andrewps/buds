@@ -31,9 +31,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[Parse setApplicationId:@"roeLftHfpCP25HbQATB4pJJiagPYYXqekccnXo1l" clientKey:@"QsvHcijsJ4PZHMYvHT9sO2FcvMOg7r93vU7UwxC9"];
+	[Parse setApplicationId:@"W5YTvVXlQMi4Ok7wnuFzx3lzSCJHPsOo8DWIAjNS" clientKey:@"OWJV4puN5moN2nGm8IUPG4CJhE6C3882ebN7VRHq"];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	[PFTwitterUtils initializeWithConsumerKey:@"kS83MvJltZwmfoWVoyE1R6xko" consumerSecret:@"YXSupp9hC2m1rugTfoSyqricST9214TwYapQErBcXlP1BrSfND"];
+    // [PFTwitterUtils initializeWithConsumerKey:@"nAjkGfo6WEzTjiDF7efQQMcfN" consumerSecret:@"lzq4AgOnHJXo2E6PKxrF7lujrc2SykqdROwoe4HQ9vAj4APSon"];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:nil];
 	//---------------------------------------------------------------------------------------------------------------------------------------------

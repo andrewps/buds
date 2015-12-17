@@ -12,7 +12,7 @@
 #import <Parse/Parse.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
-#import <ParseTwitterUtils/ParseTwitterUtils.h>
+//#import <ParseTwitterUtils/ParseTwitterUtils.h>
 #import "ProgressHUD.h"
 #import "UIImageView+WebCache.h"
 
@@ -56,42 +56,42 @@
 #pragma mark - Twitter login methods
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-- (IBAction)actionTwitter:(id)sender
+//- (IBAction)actionTwitter:(id)sender
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-{
-	[ProgressHUD show:@"Signing in..." Interaction:NO];
-	[PFTwitterUtils logInWithBlock:^(PFUser *user, NSError *error)
-	{
-		if (user != nil)
-		{
-			if (user[PF_USER_TWITTERID] != nil)
-			{
-				[self userLoggedIn:user];
-			}
-			else [self processTwitter:user];
-		}
-		else [ProgressHUD showError:@"Twitter login error."];
-	}];
-}
+//{
+//	[ProgressHUD show:@"Signing in..." Interaction:NO];
+//	[PFTwitterUtils logInWithBlock:^(PFUser *user, NSError *error)
+//	{
+//		if (user != nil)
+//		{
+//			if (user[PF_USER_TWITTERID] != nil)
+//			{
+//				[self userLoggedIn:user];
+//			}
+//			else [self processTwitter:user];
+//		}
+//		else [ProgressHUD showError:@"Twitter login error."];
+//	}];
+//}
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)processTwitter:(PFUser *)user
+//- (void)processTwitter:(PFUser *)user
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-{
-	PF_Twitter *twitter = [PFTwitterUtils twitter];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	user[PF_USER_FULLNAME] = twitter.screenName;
-	user[PF_USER_FULLNAME_LOWER] = [twitter.screenName lowercaseString];
-	user[PF_USER_TWITTERID] = twitter.userId;
-	[user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-	{
-		if (error == nil)
-		{
-			[self userLoggedIn:user];
-		}
-		else [self loginFailed:@"Failed to save user data."];
-	}];
-}
+//{
+//	PF_Twitter *twitter = [PFTwitterUtils twitter];
+//	//---------------------------------------------------------------------------------------------------------------------------------------------
+//	user[PF_USER_FULLNAME] = twitter.screenName;
+//	user[PF_USER_FULLNAME_LOWER] = [twitter.screenName lowercaseString];
+//	user[PF_USER_TWITTERID] = twitter.userId;
+//	[user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+//	{
+//		if (error == nil)
+//		{
+//			[self userLoggedIn:user];
+//		}
+//		else [self loginFailed:@"Failed to save user data."];
+//	}];
+//}
 
 #pragma mark - Facebook login methods
 
