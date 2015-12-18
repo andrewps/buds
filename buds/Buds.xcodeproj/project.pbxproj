@@ -224,6 +224,8 @@
 		29EE74E61BB0236C0098DB1A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE74E51BB0236C0098DB1A /* libz.tbd */; };
 		29EE74E81BB023760098DB1A /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE74E71BB023760098DB1A /* libicucore.tbd */; };
 		29EE74EA1BB0238F0098DB1A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EE74E91BB0238F0098DB1A /* libc++.tbd */; };
+		9D8885DE1C2451F8004187DC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8885DC1C2451F8004187DC /* Fabric.framework */; };
+		9D8885DF1C2451F8004187DC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8885DD1C2451F8004187DC /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -590,6 +592,8 @@
 		29EE74E51BB0236C0098DB1A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		29EE74E71BB023760098DB1A /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		29EE74E91BB0238F0098DB1A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9D8885DC1C2451F8004187DC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
+		9D8885DD1C2451F8004187DC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,6 +605,7 @@
 				29EE74E81BB023760098DB1A /* libicucore.tbd in Frameworks */,
 				29EE74E61BB0236C0098DB1A /* libz.tbd in Frameworks */,
 				292634271BD10ACA0003D2E0 /* FBSDKCoreKit.framework in Frameworks */,
+				9D8885DF1C2451F8004187DC /* Crashlytics.framework in Frameworks */,
 				29EE74E41BB023630098DB1A /* libsqlite3.tbd in Frameworks */,
 				2936D2721A55790C001A5D5C /* Social.framework in Frameworks */,
 				2936D26C1A5578D8001A5D5C /* AudioToolbox.framework in Frameworks */,
@@ -618,6 +623,7 @@
 				292634201BD1093F0003D2E0 /* Bolts.framework in Frameworks */,
 				2936D25E1A5578A5001A5D5C /* StoreKit.framework in Frameworks */,
 				2936D25C1A55789E001A5D5C /* SystemConfiguration.framework in Frameworks */,
+				9D8885DE1C2451F8004187DC /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1520,6 +1526,8 @@
 		29EB243319E9297900D7AA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D8885DC1C2451F8004187DC /* Fabric.framework */,
+				9D8885DD1C2451F8004187DC /* Crashlytics.framework */,
 				292634291BD10B210003D2E0 /* Firebase.framework */,
 				292634251BD10ACA0003D2E0 /* FBSDKCoreKit.framework */,
 				292634261BD10ACA0003D2E0 /* FBSDKLoginKit.framework */,
@@ -1555,6 +1563,7 @@
 				29EB240119E9292500D7AA97 /* Sources */,
 				29EB240219E9292500D7AA97 /* Frameworks */,
 				29EB240319E9292500D7AA97 /* Resources */,
+				9D8885DB1C2451BA004187DC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1687,6 +1696,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D8885DB1C2451BA004187DC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f306bab5026ed3258b78100188adb9d1d3e24f0a c272e89e8386363dab815521a3c5b9c1a957b822c3277201e6e2deada6520656";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29EB240119E9292500D7AA97 /* Sources */ = {
@@ -1925,6 +1950,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
@@ -1945,6 +1971,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = app/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;

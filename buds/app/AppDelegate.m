@@ -19,6 +19,8 @@
 #import "common.h"
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 #import "RecentView.h"
 #import "GroupsView.h"
 #import "PeopleView.h"
@@ -31,6 +33,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
+    [Fabric with:@[[Crashlytics class]]];
 	[Parse setApplicationId:@"W5YTvVXlQMi4Ok7wnuFzx3lzSCJHPsOo8DWIAjNS" clientKey:@"OWJV4puN5moN2nGm8IUPG4CJhE6C3882ebN7VRHq"];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
     // [PFTwitterUtils initializeWithConsumerKey:@"nAjkGfo6WEzTjiDF7efQQMcfN" consumerSecret:@"lzq4AgOnHJXo2E6PKxrF7lujrc2SykqdROwoe4HQ9vAj4APSon"];
